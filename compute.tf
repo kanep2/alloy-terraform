@@ -49,7 +49,6 @@ module "public_bastion_sg" {
   tags         = local.tags
 }
 
-# Security Group for Private EC2 Instances
 module "private_sg" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "4.0.0"
