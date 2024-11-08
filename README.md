@@ -1,6 +1,6 @@
 # alloy-terraform
 
-Components:
+Components:  
 VPC - The VPC is created with 1 public and 2 private subnets across 2 availability zones. 
 1 public subnet contains a NAT gateway and the other a bastion host. 2 of the private 
 subnets are for our application and 2 are for our database. The goal was to 
@@ -19,13 +19,13 @@ RDS - This is deployed across both availability zones in our private subnets. Cu
 has a standby instance for resiliency however this could benefit from scaling as well.
 
 Possible improvements:
-    -Add TLS to load balancer for security 
-    -Scaling for RDS 
-    -Containerize ec2 instances
-    -Orchestration via kubernetes or AWS autoscaler
-    -Add remote backend for terraform state
-    -Use secrets manager
-    -Add support for multiple environments
+    -Add TLS to load balancer for security    
+    -Scaling for RDS    
+    -Containerize ec2 instances   
+    -Orchestration via kubernetes or AWS autoscaler   
+    -Add remote backend for terraform state   
+    -Use secrets manager    
+    -Add support for multiple environments    
 
 Organization:
 I decided not to create modules here as the code mostly uses other modules already. I would
