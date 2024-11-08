@@ -8,10 +8,13 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-1"
+  region = var.aws_region
 }
 
-resource "aws_instance" "instance" {
-  ami           = "ami-0da424eb883458071"
-  instance_type = "t2.micro"
-}     
+locals {
+  tags = {
+    project = "alloy-tf"
+    environment = var.environment
+  }
+}
+
